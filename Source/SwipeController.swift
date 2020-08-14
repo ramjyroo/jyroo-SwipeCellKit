@@ -211,7 +211,8 @@ class SwipeController: NSObject {
                 contentEdgeInsets = UIEdgeInsets(top: top, left: 0, bottom: bottom, right: 0)
             }
         }
-        
+        contentEdgeInsets = UIEdgeInsets(top: contentEdgeInsets.top, left: contentEdgeInsets.left, bottom: contentEdgeInsets.bottom + options.bottomOffset, right: contentEdgeInsets.right)
+
         let actionsView = SwipeActionsView(contentEdgeInsets: contentEdgeInsets,
                                            maxSize: swipeable.bounds.size,
                                            safeAreaInsetView: scrollView,
