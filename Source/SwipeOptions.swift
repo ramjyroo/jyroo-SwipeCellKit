@@ -6,29 +6,13 @@
 //
 
 import UIKit
-
-extension CGFloat {
-    /**
-     The relative dimension to the corresponding screen size.
-    */
-    var dp: CGFloat {
-        return self * (UIScreen.main.bounds.width / 768.0)
-    }
-}
-
-extension Int {
-    var dp: CGFloat {
-        return CGFloat(self).dp
-    }
-}
-
 /// :nodoc:
 public typealias SwipeTableOptions = SwipeOptions
 
 /// The `SwipeOptions` class provides options for transistion and expansion behavior for swiped cell.
 public struct SwipeOptions {
     /// bottom offset to reduce the height of the swipe button
-    public var bottomOffset: CGFloat = 0.dp
+    public var bottomOffset: CGFloat = 0.0
     
     /// The transition style. Transition is the style of how the action buttons are exposed during the swipe.
     public var transitionStyle: SwipeTransitionStyle = .border
